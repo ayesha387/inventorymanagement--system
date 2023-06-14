@@ -14,17 +14,22 @@ public class PurchaseOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
-    @Column(insertable=false, updatable=false)
     /*private int supplier_id;*/
-    private Long supplier_id;
+
     private Date orderDate;
     private Date expectedDeliveryDate;
     private double totalCost;
+    @Column(insertable=false, updatable=false)
+    private Long supplier_id;
    /* private String status;*/
 
     @ManyToOne
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
+
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
 }

@@ -15,12 +15,12 @@ public class Customer {
     @Column(name = "id")
     private Long id;
     private String name;
-    private String contactInformation;
+    private String phoneNo;
     private String address;
 
-
     @OneToMany(mappedBy = "customer")
-    private List<SalesOrder> salesOrders;
+    private List<PurchaseOrder> purchaseOrders;
+    /*private List<SalesOrder> salesOrders;*/
 
 
 }

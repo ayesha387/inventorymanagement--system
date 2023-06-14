@@ -28,8 +28,10 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private List<InventoryItem> inventoryItems;
 
+
     @ManyToOne
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
+
 
 }
