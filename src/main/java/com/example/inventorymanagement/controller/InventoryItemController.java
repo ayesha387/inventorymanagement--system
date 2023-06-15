@@ -1,6 +1,4 @@
 package com.example.inventorymanagement.controller;
-
-import com.example.inventorymanagement.entity.Customer;
 import com.example.inventorymanagement.entity.InventoryItem;
 import com.example.inventorymanagement.service.InventoryItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,17 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/inventory-items")
+@RequestMapping("/inventoryItems")
 public class InventoryItemController {
     @Autowired
     private InventoryItemService inventoryItemService;
-/*    private final InventoryItemService inventoryItemService;*/
-/*
-    @Autowired
-    public InventoryItemController(InventoryItemService inventoryItemService) {
-        this.inventoryItemService = inventoryItemService;
-    }*/
-
     @PostMapping("/inventoryItem")
     public ResponseEntity<Void> createInventoryItem(@RequestBody InventoryItem inventoryItem) {
         inventoryItemService.saveInventoryItem(inventoryItem);

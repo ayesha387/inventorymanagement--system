@@ -1,8 +1,6 @@
 package com.example.inventorymanagement.entity;
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.List;
 
 @Entity
@@ -11,11 +9,15 @@ import java.util.List;
 public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String contactInformation;
-    private String address;
 
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "contactInformation")
+    private String contactInformation;
+    @Column(name = "address")
+    private String address;
 
     @OneToMany(mappedBy = "supplier")
     private List<Product> products;

@@ -15,12 +15,6 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductService productService;
-/*    private final ProductService productService;*/
-
- /*   @Autowired
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }*/
 
     @PostMapping("/product")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
@@ -41,7 +35,6 @@ public class ProductController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product product) {
-        // Ensure the product ID matches the path variable
         if (!id.equals(product.getId())) {
             return ResponseEntity.badRequest().build();
         }

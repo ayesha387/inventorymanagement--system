@@ -13,14 +13,6 @@ public class SupplierController {
 
     @Autowired
     private SupplierService supplierService;
-/*
-    private final SupplierService supplierService;
-
-    @Autowired
-    public SupplierController(SupplierService supplierService) {
-        this.supplierService = supplierService;
-    }
-*/
 @PostMapping("/supplier")
 public Supplier saveSupplier(@RequestBody Supplier supplier) {
     return supplierService.saveSupplier(supplier);

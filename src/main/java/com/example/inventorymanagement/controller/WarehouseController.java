@@ -1,5 +1,4 @@
 package com.example.inventorymanagement.controller;
-
 import com.example.inventorymanagement.entity.Warehouse;
 import com.example.inventorymanagement.service.WarehouseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +12,6 @@ public class WarehouseController {
 
     @Autowired
     private WarehouseService warehouseService;
-/*
-    private final WarehouseService warehouseService;
-
-    public WarehouseController(WarehouseService warehouseService) {
-        this.warehouseService = warehouseService;
-    }
-*/
 
     @PostMapping("/warehouse")
     public Warehouse createWarehouse(@RequestBody Warehouse warehouse) {

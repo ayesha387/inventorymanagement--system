@@ -2,9 +2,7 @@ package com.example.inventorymanagement.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "sales_orders")
@@ -13,16 +11,15 @@ public class SalesOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Column(name = "id")
     private Long id;
-
-    @Column(insertable=false, updatable=false)
-/*    private int customer_id;*/
-    private Long customer_id;
     private Date orderDate;
+    @Column(name = "deliveryAddress")
     private String deliveryAddress;
+    @Column(name = "totalCost")
     private double totalCost;
-  /*  private String status;*/
-
+    @Column(insertable=false, updatable=false)
+    private Long customer_id;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")

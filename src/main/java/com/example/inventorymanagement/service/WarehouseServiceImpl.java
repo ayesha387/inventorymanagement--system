@@ -11,12 +11,6 @@ import java.util.List;
 public class WarehouseServiceImpl implements WarehouseService {
     @Autowired
     private WarehouseRepository warehouseRepository;
-/*    private final WarehouseRepository warehouseRepository;
-
-    public WarehouseServiceImpl(WarehouseRepository warehouseRepository) {
-        this.warehouseRepository = warehouseRepository;
-    }*/
-
     @Override
     public List<Warehouse> getAllWarehouses() {
         return warehouseRepository.findAll();

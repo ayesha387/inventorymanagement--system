@@ -12,16 +12,6 @@ import java.util.NoSuchElementException;
 public class SalesOrderService {
     @Autowired
     private SalesOrderRepository salesOrderRepository;
-  /*  private final SalesOrderRepository salesOrderRepository;*/
-
-/*
-    public SalesOrderService(SalesOrderRepository salesOrderRepository) {
-        this.salesOrderRepository = salesOrderRepository;
-    }
-*/
-
-    // Add service methods for CRUD operations or any other business logic
-
     public SalesOrder saveSalesOrder(SalesOrder salesOrder) {
         return salesOrderRepository.save(salesOrder);
     }

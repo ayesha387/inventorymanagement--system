@@ -12,11 +12,6 @@ import java.util.List;
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
-   /* private final CustomerService customerService;
-*/
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
-    }
 
     @PostMapping("/customer")
     public Customer createCustomer(@RequestBody Customer customer) {

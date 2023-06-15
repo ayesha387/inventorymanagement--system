@@ -12,14 +12,6 @@ import java.util.List;
 public class InventoryItemService {
     @Autowired
     private InventoryItemRepository inventoryItemRepository;
- /*   private final InventoryItemRepository inventoryItemRepository;*/
-
-   /* @Autowired
-    public InventoryItemService(InventoryItemRepository inventoryItemRepository) {
-        this.inventoryItemRepository = inventoryItemRepository;
-    }*/
-
-    // Add service methods for CRUD operations or custom business logic
 
     public List<InventoryItem> getAllInventoryItems() {
         return inventoryItemRepository.findAll();

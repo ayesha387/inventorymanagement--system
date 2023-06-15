@@ -13,11 +13,6 @@ public class TransactionController {
 
     @Autowired
     private TransactionService transactionService;
-/*    private final TransactionService transactionService;
-
-    public TransactionController(TransactionService transactionService) {
-        this.transactionService = transactionService;
-    }*/
 
     @PostMapping("/transaction")
     public Transaction createTransaction(@RequestBody Transaction transaction) {
@@ -28,7 +23,6 @@ public class TransactionController {
     public List<Transaction> getAllTransactions() {
         return transactionService.getAllTransactions();
     }
-
 
     @GetMapping("/{id}")
     public Transaction getTransactionById(@PathVariable Long id) {

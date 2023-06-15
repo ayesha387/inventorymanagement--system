@@ -1,10 +1,7 @@
 package com.example.inventorymanagement.entity;
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "transactions")
@@ -13,11 +10,16 @@ public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Column(name = "id")
     private Long id;
+    @Column(name = "transactionDate")
     private Date transactionDate;
     private String type;
+    @Column(name = "quantity")
     private int quantity;
+    @Column(name = "unitPrice")
     private double unitPrice;
+    @Column(name = "relatedOrderId")
     private int relatedOrderId;
 
     @ManyToOne

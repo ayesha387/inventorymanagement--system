@@ -11,13 +11,6 @@ import java.util.List;
 public class PurchaseOrderService {
     @Autowired
     private PurchaseOrderRepository purchaseOrderRepository;
-/*    private final PurchaseOrderRepository purchaseOrderRepository;*/
-
-/*    @Autowired
-    public PurchaseOrderService(PurchaseOrderRepository purchaseOrderRepository) {
-        this.purchaseOrderRepository = purchaseOrderRepository;
-    }*/
-
     public List<PurchaseOrder> getAllPurchaseOrders() {
         return purchaseOrderRepository.findAll();
     }

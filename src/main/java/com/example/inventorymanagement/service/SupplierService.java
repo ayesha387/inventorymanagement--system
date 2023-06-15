@@ -11,14 +11,6 @@ import java.util.List;
 public class SupplierService {
     @Autowired
     private SupplierRepository supplierRepository;
- /*   private final SupplierRepository supplierRepository;*/
-
-/*
-    @Autowired
-    public SupplierService(SupplierRepository supplierRepository) {
-        this.supplierRepository = supplierRepository;
-    }
-*/
 
     public List<Supplier> getAllSuppliers() {
         return supplierRepository.findAll();

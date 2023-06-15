@@ -1,5 +1,4 @@
 package com.example.inventorymanagement.controller;
-
 import com.example.inventorymanagement.entity.PurchaseOrder;
 import com.example.inventorymanagement.service.PurchaseOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +10,10 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/purchase-orders")
+@RequestMapping("/purchaseOrders")
 public class PurchaseOrderController {
     @Autowired
     private PurchaseOrderService purchaseOrderService;
-  /*  private final PurchaseOrderService purchaseOrderService;*/
-
-/*
-    @Autowired
-    public PurchaseOrderController(PurchaseOrderService purchaseOrderService) {
-        this.purchaseOrderService = purchaseOrderService;
-    }
-*/
 
     @PostMapping("/purchaseOrder")
     public ResponseEntity<PurchaseOrder> createPurchaseOrder(@RequestBody PurchaseOrder purchaseOrder) {

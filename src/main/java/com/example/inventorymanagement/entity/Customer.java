@@ -14,13 +14,14 @@ public class Customer {
 
     @Column(name = "id")
     private Long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "phoneNo")
     private String phoneNo;
+    @Column(name = "address")
     private String address;
 
     @OneToMany(mappedBy = "customer")
     private List<PurchaseOrder> purchaseOrders;
-    /*private List<SalesOrder> salesOrders;*/
-
 
 }

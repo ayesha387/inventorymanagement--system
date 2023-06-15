@@ -1,10 +1,7 @@
 package com.example.inventorymanagement.entity;
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "purchase_orders")
@@ -13,20 +10,20 @@ public class PurchaseOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Column(name = "id")
     private Long id;
-    /*private int supplier_id;*/
-
+    @Column(name = "orderDate")
     private Date orderDate;
+    @Column(name = "expectedDeliveryDate")
     private Date expectedDeliveryDate;
+    @Column(name = "totalCost")
     private double totalCost;
     @Column(insertable=false, updatable=false)
     private Long supplier_id;
-   /* private String status;*/
 
     @ManyToOne
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
-
 
     @ManyToOne
     @JoinColumn(name = "customer_id")

@@ -12,13 +12,6 @@ import java.util.NoSuchElementException;
 public class TransactionServiceImpl implements TransactionService {
     @Autowired
     private TransactionRepository transactionRepository;
-/*
-    private final TransactionRepository transactionRepository;
-
-    public TransactionServiceImpl(TransactionRepository transactionRepository) {
-        this.transactionRepository = transactionRepository;
-    }
-*/
 
     @Override
     public Transaction createTransaction(Transaction transaction) {

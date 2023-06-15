@@ -2,30 +2,21 @@ package com.example.inventorymanagement.controller;
 
 import com.example.inventorymanagement.entity.SalesOrder;
 import com.example.inventorymanagement.service.SalesOrderService;
-import com.example.inventorymanagement.service.SalesOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/sales-orders")
+@RequestMapping("/salesOrders")
 public class SalesOrderController {
     @Autowired
     private SalesOrderService salesOrderService;
-  /*  private final SalesOrderService salesOrderService;*/
-
-/*
-    public SalesOrderController(SalesOrderService salesOrderService) {
-        this.salesOrderService = salesOrderService;
-    }
-*/
 
     @PostMapping("/salesOrder")
     public SalesOrder createSalesOrder(@RequestBody SalesOrder salesOrder) {
         return salesOrderService.saveSalesOrder(salesOrder);
     }
-
 
     @GetMapping("/list")
     public List<SalesOrder> getAllSalesOrders() {

@@ -12,21 +12,26 @@ public class InventoryItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Column(name = "id")
     private Long id;
-    @Column(insertable=false, updatable=false)
-    private Long product_id;
+    @Column(name = "itemName")
     private String itemName;
+    @Column(name = "companyName")
     private String companyName;
+    @Column(name = "purchaseDate")
     private Date purchaseDate;
+    @Column(name = "saleDate")
     private Date saleDate;
+    @Column(name = "balanceRemaining")
     private double balanceRemaining;
-    /*private int product_id;*/
+    @Column(name = "quantity")
+    private int quantity;
+    @Column(name = "lastRestockDate")
+    private Date lastRestockDate;
     @Column(insertable=false, updatable=false)
     private Long warehouse_id;
- /*   private int warehouse_id;*/
-    private int quantity;
-    private Date lastRestockDate;
-
+    @Column(insertable=false, updatable=false)
+    private Long product_id;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
