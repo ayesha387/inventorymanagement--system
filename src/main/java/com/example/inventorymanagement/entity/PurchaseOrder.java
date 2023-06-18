@@ -1,6 +1,8 @@
 package com.example.inventorymanagement.entity;
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -13,9 +15,9 @@ public class PurchaseOrder {
     @Column(name = "id")
     private Long id;
     @Column(name = "orderDate")
-    private Date orderDate;
+    private LocalDate orderDate;
     @Column(name = "expectedDeliveryDate")
-    private Date expectedDeliveryDate;
+    private LocalDate expectedDeliveryDate;
     @Column(name = "totalCost")
     private double totalCost;
     @Column(insertable=false, updatable=false)

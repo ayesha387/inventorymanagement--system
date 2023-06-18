@@ -3,6 +3,7 @@ package com.example.inventorymanagement.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -19,17 +20,19 @@ public class InventoryItem {
     @Column(name = "companyName")
     private String companyName;
     @Column(name = "purchaseDate")
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
     @Column(name = "saleDate")
-    private Date saleDate;
+    private LocalDate saleDate;
     @Column(name = "balanceRemaining")
     private double balanceRemaining;
     @Column(name = "quantity")
     private int quantity;
     @Column(name = "lastRestockDate")
-    private Date lastRestockDate;
+    private LocalDate lastRestockDate;
+
     @Column(insertable=false, updatable=false)
     private Long warehouse_id;
+
     @Column(insertable=false, updatable=false)
     private Long product_id;
 

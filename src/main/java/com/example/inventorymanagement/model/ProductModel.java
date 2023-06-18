@@ -1,7 +1,9 @@
 package com.example.inventorymanagement.model;
 
-import java.util.Date;
+import lombok.Data;
 
+import java.util.Date;
+@Data
 public class ProductModel {
     private String name;
     private String description;

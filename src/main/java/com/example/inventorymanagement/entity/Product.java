@@ -3,6 +3,7 @@ package com.example.inventorymanagement.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -26,9 +27,9 @@ public class Product {
     @Column(name = "category")
     private String category;
     @Column(name = "purchaseDate")
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
     @Column(name = "saleDate")
-    private Date saleDate;
+    private LocalDate saleDate;
     @Column(insertable=false, updatable=false)
     private Long supplier_id;
 

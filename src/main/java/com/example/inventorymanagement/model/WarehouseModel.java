@@ -1,5 +1,8 @@
 package com.example.inventorymanagement.model;
 
+import lombok.Data;
+
+@Data
 public class WarehouseModel {
     private Long id;
     private String name;

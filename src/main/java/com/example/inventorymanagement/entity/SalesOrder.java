@@ -2,6 +2,8 @@ package com.example.inventorymanagement.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -13,7 +15,7 @@ public class SalesOrder {
 
     @Column(name = "id")
     private Long id;
-    private Date orderDate;
+    private LocalDate orderDate;
     @Column(name = "deliveryAddress")
     private String deliveryAddress;
     @Column(name = "totalCost")
