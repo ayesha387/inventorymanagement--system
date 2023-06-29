@@ -1,9 +1,11 @@
 package com.example.inventorymanagement.entity;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
 @Table(name = "transactions")
 @Data
@@ -15,7 +17,7 @@ public class Transaction {
     private Long id;
     @Column(name = "transactionDate")
     private LocalDate transactionDate;
-    private String type;
+    /*private String type;*/
     @Column(name = "quantity")
     private int quantity;
     @Column(name = "unitPrice")

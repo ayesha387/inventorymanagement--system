@@ -1,11 +1,13 @@
 package com.example.inventorymanagement.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.Date;
-
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
 @Table(name = "sales_orders")
 @Data
@@ -15,6 +17,7 @@ public class SalesOrder {
 
     @Column(name = "id")
     private Long id;
+    @Column(name = "orderDate")
     private LocalDate orderDate;
     @Column(name = "deliveryAddress")
     private String deliveryAddress;

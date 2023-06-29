@@ -2,6 +2,7 @@ package com.example.inventorymanagement.model;
 
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Date;
 @Data
 public class ProductModel {
@@ -10,6 +11,6 @@ public class ProductModel {
     private double price;
     private int quantity;
     private String category;
-    private Date purchaseDate;
-    private Date saleDate;
+    private LocalDate purchaseDate;
+    private LocalDate saleDate;
 }

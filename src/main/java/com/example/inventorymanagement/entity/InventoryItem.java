@@ -1,11 +1,12 @@
 package com.example.inventorymanagement.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.Date;
-
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
 @Table(name = "inventory_items")
 @Data
@@ -23,16 +24,16 @@ public class InventoryItem {
     private LocalDate purchaseDate;
     @Column(name = "saleDate")
     private LocalDate saleDate;
+
+    @Column(insertable=false, updatable=false)
+    private Long warehouse_id;
+
     @Column(name = "balanceRemaining")
     private double balanceRemaining;
     @Column(name = "quantity")
     private int quantity;
     @Column(name = "lastRestockDate")
     private LocalDate lastRestockDate;
-
-    @Column(insertable=false, updatable=false)
-    private Long warehouse_id;
-
     @Column(insertable=false, updatable=false)
     private Long product_id;
 

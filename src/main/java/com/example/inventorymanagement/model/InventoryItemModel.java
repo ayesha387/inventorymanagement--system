@@ -3,16 +3,17 @@ package com.example.inventorymanagement.model;
 import jakarta.persistence.Column;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Date;
 @Data
 public class InventoryItemModel {
     private String itemName;
     private String companyName;
-    private Date purchaseDate;
-    private Date saleDate;
+    private LocalDate purchaseDate;
+    private LocalDate saleDate;
     private double balanceRemaining;
     private Long warehouse_id;
     private int quantity;
-    private Date lastRestockDate;
+    private LocalDate lastRestockDate;
 
 }
