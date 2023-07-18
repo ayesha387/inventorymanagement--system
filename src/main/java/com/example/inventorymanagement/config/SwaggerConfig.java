@@ -1,4 +1,4 @@
-package com.example.inventorymanagement.config;
+/*package com.example.inventorymanagement.config;*/
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

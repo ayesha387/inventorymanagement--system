@@ -22,7 +22,6 @@ public class Customer {
     private String phoneNo;
     @Column(name = "address")
     private String address;
-
     @OneToMany(mappedBy = "customer")
     private List<PurchaseOrder> purchaseOrders;
 
